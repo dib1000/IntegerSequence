@@ -1,3 +1,4 @@
+import java.util.NoSuchElementException;
 public class Test {
   public static void main(String[] args) {
     System.out.println("TESTING LENGTH AND CONSTRUCTOR EXCEPTION");
@@ -21,6 +22,13 @@ public class Test {
     System.out.println("reset current value");
     System.out.println(x.next());
     System.out.println();
+    try {
+      y.next();
+      y.next();
+    }
+    catch(NoSuchElementException e) {
+      e.printStackTrace();
+    }
     System.out.println("Loop thing");
     IntegerSequence r = new Range(10,15);
     while(r.hasNext()){
