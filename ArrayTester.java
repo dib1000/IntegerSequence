@@ -27,5 +27,16 @@ public class ArrayTester {
     catch(NoSuchElementException e) {
       e.printStackTrace();
     }
+    System.out.println();
+    System.out.println("Testing second constructor");
+    IntegerSequence r = new Range(10,20);
+   IntegerSequence ar = new ArraySequence(r);
+   System.out.println(r.next());
+
+   System.out.println("ArraySequence(seq):");
+   while(ar.hasNext()){
+     System.out.print(ar.next()+", ");
+   }
+   System.out.println();
   }
 }
