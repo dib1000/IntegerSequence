@@ -17,5 +17,8 @@ public class Test {
     System.out.println(x.next());
     System.out.println(x.next());
     System.out.println(x.next());
+    x.reset();
+    System.out.println("reset current value");
+    System.out.println(x.next());
   }
 }

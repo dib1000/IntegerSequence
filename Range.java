@@ -14,7 +14,7 @@ public class Range implements IntegerSequence{
   }
 
   public void reset(){
-    System.out.println("");
+    current = start;
   }
   public int length(){
     return (end-start)+1;
@@ -32,8 +32,5 @@ public class Range implements IntegerSequence{
     int cur = current;
     current+=1;
     return cur;
-  }
-  public int getEnd() {
-    return end;
   }
 }
