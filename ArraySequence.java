@@ -15,9 +15,9 @@ public class ArraySequence implements IntegerSequence{
     return 0;
   }
   public int length() {
-    return 0;
+    return data.length;
   }
   public void reset() {
-    System.out.println();
+    currentIndex = 0;
   }
 }
