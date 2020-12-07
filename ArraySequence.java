@@ -12,6 +12,9 @@ public class ArraySequence implements IntegerSequence{
     return currentIndex<data.length;
   }
   public int next() {
+    if(!(hasNext())) {
+      throw new NoSuchElementException(currentIndex + " is not a valid value for the sequence");
+    }
     int cur = data[currentIndex];
     currentIndex+=1;
     return cur;
