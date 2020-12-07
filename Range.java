@@ -4,20 +4,20 @@ public class Range implements IntegerSequence{
 
   //@param start : the starting value (inclusive) which must be <= end.
   //@param end : the ending value which is also inclusive.
-  public Range(int start,  int end){
+  public Range(int start, int end){
     if(start>end) {
       throw new IllegalArgumentException("Capacity " +start+ " has to be <= " + end);
     }
-    start = start;
-    end = end;
-    current = start;
+    this.start = start;
+    this.end = end;
+    this.current = start;
   }
 
   public void reset(){
     System.out.println("");
   }
   public int length(){
-    return 0;
+    return (end-start)+1;
   }
 
   //When current is no longer a valid element in the range, it should return false.
@@ -31,5 +31,7 @@ public class Range implements IntegerSequence{
   public int next(){
     return 0;
   }
-
+  public int getEnd() {
+    return end;
+  }
 }
