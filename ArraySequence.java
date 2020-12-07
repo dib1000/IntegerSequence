@@ -9,10 +9,12 @@ public class ArraySequence implements IntegerSequence{
     currentIndex = 0;
   }
   public boolean hasNext() {
-    return true;
+    return currentIndex<data.length;
   }
   public int next() {
-    return 0;
+    int cur = data[currentIndex];
+    currentIndex+=1;
+    return cur;
   }
   public int length() {
     return data.length;
